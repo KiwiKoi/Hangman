@@ -1,23 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import styled from "styled-components";
+import "./components/fetchWords";
+
+const Title = styled.h1`
+  font-size: 56px;
+  font-family: "pangolin", cursive;
+  margin: 0;
+`;
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Title>Hangman</Title>
+        <p>Guess the phrase</p>
+        <fetchWords />
       </header>
     </div>
   );
